@@ -1,10 +1,10 @@
-// Tu usuario de GitHub
+// mi usuario de GitHub
 const GITHUB_USERNAME = 'Eduardo24012';
 
 // URLs de la API con parámetros
 const API_URLS = {
     user: `https://api.github.com/users/${GITHUB_USERNAME}`,
-    repos: `https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=6&type=owner&direction=desc`,
+    repos: `https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=3&type=owner&direction=desc`,
     followers: `https://api.github.com/users/${GITHUB_USERNAME}/followers?per_page=5`
 };
 
@@ -35,7 +35,7 @@ async function fetchUserProfile() {
         document.getElementById('avatar').src = user.avatar_url;
         document.getElementById('avatar').alt = user.name || user.login;
         document.getElementById('name').textContent = user.name || user.login;
-        document.getElementById('bio').textContent = user.bio || 'Desarrollador de software';
+        document.getElementById('bio').textContent = user.bio || 'Estudiante de TSU en Software en la UTHH';
         document.getElementById('location').textContent = user.location || 'Ubicación no especificada';
         document.getElementById('followers-count').textContent = `${user.followers} seguidores`;
         
